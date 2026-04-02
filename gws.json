@@ -1,0 +1,23 @@
+{
+  "name": "python-ml-pytorch",
+  "version": "1.0.0",
+  "registry": {
+    "mode": "local"
+  },
+  "services": [
+    {
+      "name": "python-ml-pytorch",
+      "path": ".",
+      "image": "python-ml-pytorch",
+      "manifests": ".gws/k8s",
+      "dockerfile": ".gws/Dockerfile"
+    }
+  ],
+  "provision": {
+    "environments": {
+      "dev": {
+        "type": "k3d"
+      }
+    }
+  }
+}
